@@ -207,7 +207,7 @@ def plot_paths(data, show_D_label=True):
 
 
 if __name__ == "__main__":
-    a = LD(1.01)
+    a = LD(2)
     data = simulate(a=a, D_limit=LD('100.0'))
     print("cycles:", data["cycles"])
     print("final D:", data["D"][-1])

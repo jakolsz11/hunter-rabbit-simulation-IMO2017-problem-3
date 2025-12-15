@@ -47,6 +47,6 @@ def draw_plots(data):
 
 
 if __name__ == "__main__":
-    a = 2000000
+    a = 2
     data = get_data(a=a)
     draw_plots(data)
