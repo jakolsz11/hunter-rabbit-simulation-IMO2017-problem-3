@@ -94,6 +94,18 @@ You can experiment with different values of the parameter `a` by editing it dire
 
     deactivate 
 
+### Windows users
+
+The `setup.sh` script is intended for macOS / Linux.
+
+On Windows, please set up the environment manually:
+
+```bat
+python -m venv .venv
+.venv\Scripts\activate
+pip install --upgrade pip
+pip install -r requirements.txt
+
 ---
 
 ## ⚙️ Why do we use $\lceil aD \rceil$?
