@@ -100,12 +100,10 @@ The `setup.sh` script is intended for macOS / Linux.
 
 On Windows, please set up the environment manually:
 
-$$
-python -m venv .venv
-.venv\Scripts\activate
-pip install --upgrade pip
-pip install -r requirements.txt
-$$
+    python -m venv .venv
+    .venv\Scripts\activate
+    pip install --upgrade pip
+    pip install -r requirements.txt
 
 ---
 
