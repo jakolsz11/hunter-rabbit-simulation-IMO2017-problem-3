@@ -88,6 +88,7 @@ Examples:
 ### 5. Adjust parameters
 
 All configurable parameters are defined in the `config.py` file.
+
 You can experiment with different values of `a`, `d`, and `MP_PRECISION` by editing this file directly.
 
 The `MP_PRECISION` parameter specifies the number of **significant digits** used in the exact (high-precision) computations.
