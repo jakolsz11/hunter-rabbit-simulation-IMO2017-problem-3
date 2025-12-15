@@ -52,6 +52,7 @@ $$
     ├── requirements.txt
     ├── README.md
     ├── .gitignore
+    ├── config.py
     └── setup.sh
 
 ---
@@ -86,9 +87,17 @@ Examples:
 
 ### 5. Adjust parameters
 
-You can experiment with different values of the parameter `a` by editing it directly inside each script, for example:
+All configurable parameters are defined in the `config.py` file.
+You can experiment with different values of `a`, `d`, and `MP_PRECISION` by editing this file directly.
 
-    a = 1.01
+The `MP_PRECISION` parameter specifies the number of **significant digits** used in the exact (high-precision) computations.
+
+For example:
+```
+A = 1.75
+D_LIMIT = 100.0
+MP_PRECISION = 100
+```
 
 ### 6. Deactivate the environment after finishing work
 
