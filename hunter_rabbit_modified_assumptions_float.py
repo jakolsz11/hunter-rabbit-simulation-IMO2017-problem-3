@@ -1,6 +1,6 @@
-import math
 import numpy as np
 import matplotlib.pyplot as plt
+from config import A, D_LIMIT
 
 # Use NumPy longdouble for higher precision in scalar computations.
 LD = np.longdouble
@@ -203,8 +203,7 @@ def plot_paths(data, show_D_label=True):
 
 
 if __name__ == "__main__":
-    a = LD(2)
-    data = simulate(a=a, D_limit=100.0)
+    data = simulate(a=LD(A), D_limit=D_LIMIT)
     print("cycles:", data["cycles"])
     print("final D:", data["D"][-1])
     print("total moves:", data["res"])

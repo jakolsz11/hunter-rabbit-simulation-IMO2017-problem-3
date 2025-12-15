@@ -3,6 +3,7 @@ import numpy as np
 import mpmath as mp
 from hunter_rabbit_modified_assumptions_float import simulate as simulate_float
 from hunter_rabbit_modified_assumptions_hp import simulate as simulate_hp
+from config import A
 
 
 def get_data(a=2.0):
@@ -52,7 +53,7 @@ def draw_plots(results):
     ax1_D.set_xlabel('Cycle')
     ax1_D.set_ylabel('Difference in D (linear)', color="green", fontsize=12)
     ax1_D.grid()
-    ax1_D.set_title('Difference in Distance D between HP and Float Simulations')
+    ax1_D.set_title(f'Difference in Distance D between HP and Float Simulations for a={A}')
     ax1_D.ticklabel_format(axis='y', style='sci', scilimits=(0,0))
 
     ax2_D = ax1_D.twinx()
@@ -72,7 +73,7 @@ def draw_plots(results):
     ax1_a.set_xlabel('Cycle')
     ax1_a.set_ylabel('Difference in Rabbit Angle (linear)', color="green", fontsize=12)
     ax1_a.grid()
-    ax1_a.set_title('Difference in Rabbit Angle between HP and Float Simulations')
+    ax1_a.set_title(f'Difference in Rabbit Angle between HP and Float Simulations for a={A}')
     ax1_a.ticklabel_format(axis='y', style='sci', scilimits=(0,0))
 
     ax2_a = ax1_a.twinx()
@@ -91,7 +92,6 @@ def draw_plots(results):
 
 
 if __name__ == "__main__":
-    a = 2
-    data = get_data(a=a)
+    data = get_data(a=A)
     results = compare_data(data)
     draw_plots(results)

@@ -3,6 +3,7 @@ import numpy as np
 import mpmath as mp
 from hunter_rabbit_modified_assumptions_hp import simulate as simulate_modified
 from hunter_rabbit_original_rules_hp import simulate as simulate_original
+from config import A
 
 
 def get_data(a=2.0):
@@ -47,6 +48,5 @@ def draw_plots(data):
 
 
 if __name__ == "__main__":
-    a = 2
-    data = get_data(a=a)
+    data = get_data(a=A)
     draw_plots(data)
