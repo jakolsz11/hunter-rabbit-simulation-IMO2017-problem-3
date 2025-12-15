@@ -50,40 +50,49 @@ $$
     ├── compare_D_and_angle_original_and_modified.py
     │
     ├── requirements.txt
-    └── README.md
+    ├── README.md
+    ├── .gitignore
+    └── setup.sh
 
 ---
 
 ## 🚀 Installation & Running
 
-### 1. Install requirements
+### 1. Clone the repository
 
-    pip install -r requirements.txt
+    git clone https://github.com/jakolsz11/hunter-rabbit-simulation-IMO2017-problem-3.git
+    cd hunter-rabbit-simulation-IMO2017-problem-3
 
-### 2. Run simulations
+### 2. Set up the virtual environment (macOS / Linux)
 
-For example:
+    ./setup.sh
+
+This script automatically:
+- creates a virtual environment `.venv`,
+- installs all required dependencies from `requirements.txt`.
+
+### 3. Activate the virtual environment
+
+    source .venv/bin/activate
+
+### 4. Run simulations
+
+Examples:
 
     python hunter_rabbit_original_rules_hp.py
     python hunter_rabbit_modified_assumptions_hp.py
     python compare_errors_modified_assumptions.py
     python compare_D_and_angle_original_and_modified.py
 
-Adjust parameter **a** inside any script:
+### 5. Adjust parameters
+
+You can experiment with different values of the parameter `a` by editing it directly inside each script, for example:
 
     a = 1.01
 
-You are free to experiment with different values of $a$.
+### 6. Deactivate the environment after finishing work
 
----
-
-## 📊 What You Can Explore
-
-- Growth of distance $D_n$ in both models  
-- Trajectory plots of the rabbit and hunter  
-- Differences between float and high-precision computations  
-- Sensitivity introduced by rounding via $\lceil aD \rceil$  
-- Influence of parameter $a$ on escape behaviour  
+    deactivate 
 
 ---
 
